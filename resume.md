@@ -22,8 +22,8 @@ This system would check all the files that Qiniu accepts from customs every day.
 ## Talkingdata (2017.3 ~ 2017.12)
 - company link: http://www.talkingdata.com/  
 #### Data Collector  
-I joined the development of Data-Collector. All data from outside ( including bussinesses and personnal users) to Talkingdata will be collected by Data Collector. There are about 30~40TB every day  we hold,
- the tps was about 4000~7000 per server.  
+I joined the development of Data-Collector. All data from outside ( including bussinesses and personnal users) to Talkingdata will be collected by Data Collector. There are about 30-40TB every day  we hold,
+ the tps was about 4000-7000 per server.  
 #### Gray System
 I developed this system based on Data Collector. I use qconf to notify every Data-Collector node reloading config and 
 split the online data-flow into gray environment with configured rules.
