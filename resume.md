@@ -81,7 +81,7 @@ I used the new infrastructure , gin web-framwork and gorm to develop the online 
 
 - language: golang / rust / java
 - distributed-systems: distributed theory. kafka  NSQ seaweedfs 2pc raft and so on.
-- database: boltdb badger lmdb TiKV rocksdb
+- database: boltdb badger  TiKV rocksdb
 
 ---
 
