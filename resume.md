@@ -46,7 +46,12 @@ I used the new infrastructure , gin web-framwork and gorm to develop the online 
  Developed a tools to bench the performance of TIDB automatically. It Integrated sysbench so that it can auto-sysbench the TiDB cluster. It contains
  deployment, data import, preheating, multi group benchs.
 
----
+
+## A foundation in Singapore  
+
+
+---  
+
 
 # Open Source Projects
 ## My Projects
