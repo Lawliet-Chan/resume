@@ -47,27 +47,30 @@ I used the new infrastructure , gin web-framwork and gorm to develop the online 
  deployment, data import, preheating, multi group benchs.
 
 
-## A foundation in Singapore  
+## A foundation in Singapore （2020）
 
+- IPSE
+https://github.com/Lawliet-Chan/ipse-core （The main library has been included in their gitlab, this is the backup I left）  
+https://github.com/Lawliet-Chan/ipse-miner  
+This is a blockchain storage project developed using substrate. The miner (the algorithm is copied from BHD's proof of capacity) calculates the hash based on the device storage capacity and submits it to the chain. The chain needs to verify the hash to verify the miner's approximate storage. ability. The client issues a storage order to the chain and obtains the miner's basic information based on the data on the chain to choose who to use for storage. The follow-up process involves proving whether the miner actually stores the user's data, which will be implemented by the foundation's own R&D team.
 
+- IBO
+https://github.com/Lawliet-Chan/ibo-chain （The main library has been included in their gitlab, this is the backup I left）   
+This is a decentralized exchange backend service developed using substrate (much like DAO), and the exchange itself is still centralized. However, users can pledge tokens as voting rights to make democratic proposals, reviews, referendums, and final executions on whether a coin should be listed on the exchange, removed from the exchange, switching sections, etc. This series of processes is carried out on the chain, a proposal. It needs to be reviewed by the Congress before it can enter the democratic referendum. The members of Congress themselves are also democratically elected. The voting weight that each citizen can exercise is determined by the number of mortgage tokens and the mortgage period. When the results of the democratic referendum are released, they will be pushed to the central government. in the exchange. This is to ensure the transparency and democratization of currency listing and delisting on digital currency exchanges.
 ---  
 
 
 # Open Source Projects
 ## My Projects
-- YithQ  
-    https://github.com/CrocdileChan/yithQ  
-    A distributed MQ:  It's like golang version of Kafka. It use multi partitions per topic to imcrease the throughput. It has a system called Zero to be a role like etcd, 
-    it will assign  Topic-Partition to write by message-weight. I design the storage engine so that it can write/read faster than other DBs.
-    BUT it still has some bugs and many features to do. In the future, I will use raft or CURP to complete its distributed protocol and integrate etcd/zookeeper.
-    
-     
-    
-- qstore  
-    https://github.com/CrocdileChan/qstore  
-    A high performance Queue storage, it would be faster than LSM-tree database in FIFO scenarios because you can sequential write 
-    without Log Compressing and spend O(1) time reading data. 
-    You can use it for MQ's storage engine or write-ahead-log.
+- Yu (general blockchain framework)
+  A universal blockchain framework implemented in pure golang. From December 2020 to now, it is still under development and iteration. Using this framework can achieve:  
+     1. Custom consensus algorithms (including but not limited to pow/pos/poa/pbft, etc.) currently have built-in simple pow and hotstuff (this part is still being improved)    
+     2. Customize the logic of transactions and queries on the chain   
+     3. Customize block verification logic, transaction verification logic, and rules for packaging transactions from the transaction pool   
+     4. Insert custom actions at various stages of the block generation cycle, including controlling when transactions within a block are executed.
+  
+  The original intention of developing this project was because we found that existing frameworks either had high barriers to entry or low freedom in customized development, so we wanted to develop a blockchain framework that was easy to get started and highly customizable.  
+  running result: https://lawliet-chan.github.io/yu.github.io/zh/5.5%E5%BB%BA%E7%AB%8B%E5%8C%BA%E5%9D%97%E9%93%BE%E7%BD%91%E7%BB%9C.html
 
 ## Contributions
 - Substrate  
