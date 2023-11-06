@@ -69,7 +69,8 @@ Develop Rollup prover and Coordinator, Zkevm ffi interface.
 
 # Open Source Projects
 ## My Projects
-- Yu (general blockchain framework)
+- Yu (general blockchain framework)  
+  https://github.com/yu-org/yu  
   A universal blockchain framework implemented in pure golang. From December 2020 to now, it is still under development and iteration. Using this framework can achieve:  
      1. Custom consensus algorithms (including but not limited to pow/pos/poa/pbft, etc.) currently have built-in simple pow and hotstuff (this part is still being improved)    
      2. Customize the logic of transactions and queries on the chain   
