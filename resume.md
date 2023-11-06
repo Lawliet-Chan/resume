@@ -57,6 +57,13 @@ This is a blockchain storage project developed using substrate. The miner (the a
 - IBO
 https://github.com/Lawliet-Chan/ibo-chain （The main library has been included in their gitlab, this is the backup I left）   
 This is a decentralized exchange backend service developed using substrate (much like DAO), and the exchange itself is still centralized. However, users can pledge tokens as voting rights to make democratic proposals, reviews, referendums, and final executions on whether a coin should be listed on the exchange, removed from the exchange, switching sections, etc. This series of processes is carried out on the chain, a proposal. It needs to be reviewed by the Congress before it can enter the democratic referendum. The members of Congress themselves are also democratically elected. The voting weight that each citizen can exercise is determined by the number of mortgage tokens and the mortgage period. When the results of the democratic referendum are released, they will be pushed to the central government. in the exchange. This is to ensure the transparency and democratization of currency listing and delisting on digital currency exchanges.
+
+## Scroll (2021.8 ~ 2023.11)
+Blockchain infra engineer  
+https://github.com/scroll-tech/scroll  
+https://github.com/scroll-tech/scroll-prover  
+Develop Rollup prover and Coordinator, Zkevm ffi interface.
+
 ---  
 
 
