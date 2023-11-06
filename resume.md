@@ -5,7 +5,7 @@
  - Github: https://github.com/Lawliet-Chan
  - Phone: +86 13965602037
  - email: crocdilechan@gmail.com
- - Riot: @chenxinran:matrix.org
+ - telegram: @ChenXinran
  - wechat: chenxinran1228
 
 ---
