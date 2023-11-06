@@ -2,7 +2,7 @@
 
  - Male/1994
  - Guangdong University of Petrochemical Tech/  Undergraduate / Food safety major (self study CS)
- - Github: https://github.com/CrocdileChan
+ - Github: https://github.com/Lawliet-Chan
  - Phone: +86 13965602037
  - email: crocdilechan@gmail.com
  - Riot: @chenxinran:matrix.org
