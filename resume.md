@@ -7,6 +7,7 @@
 - **Email:** crocdilechan@gmail.com
 - **WeChat:** chenxinran1228
 - **Telegram:** [@ChenXinran](https://t.me/ChenXinran)
+- **Blog:** https://lawliet-chan.github.io/
 
 ---
 
