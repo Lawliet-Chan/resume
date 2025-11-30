@@ -1,88 +1,90 @@
-# Chen Xinran
+# XinRan Chen
 
-- Male / Born 1994
-- Guangdong University of Petrochemical Technology – Food Safety (Undergraduate, withdrew). Self-taught computer science during university.
-- **GitHub:** [Lawliet-Chan](https://github.com/Lawliet-Chan)
-- **Phone:** +86 13965602037
-- **Email:** crocdilechan@gmail.com
-- **WeChat:** chenxinran1228
-- **Blog:** https://lawliet-chan.github.io/
+ - Male/1994
+ - Guangdong University of Petrochemical Technology - Food Safety major, dropped out of undergraduate program. Self-taught computer science during university.
+ - Github: https://github.com/Lawliet-Chan
+ - Phone: +86 13965602037
+ - email: crocdilechan@gmail.com
+ - wechat: chenxinran1228
+ - blog: https://lawliet-chan.github.io/
+ 
+### Tech Stack
+1. rust + golang  
+2. Familiar with the underlying principles of mainstream public chains and consortium chains (see my universal blockchain framework), including consensus mechanisms, state machines, transaction pools, networking, chain structures, etc.  
+3. Familiar with distributed systems (including distributed message queues, distributed file systems, distributed databases) and storage engines (boltdb, badger)
 
----
+# Open Source Projects
+### My Personal Projects
+- Yu (Universal Blockchain Framework)   
+ https://github.com/yu-org/yu  
+ **Already deployed in production (reddio and AW-Research), and received grants from Starkware and Nervos**   
+ A universal blockchain framework implemented in pure golang. Development started in December 2020 and is still ongoing. Using this framework, you can:  
+   1. Customize consensus algorithms (including but not limited to PoW/PoS/PoA/PBFT, etc.). Currently built-in simple PoW and HotStuff (this part is still being improved).  
+   2. Customize on-chain transaction and query logic, as well as transaction pool related operations
+   3. Component modularization, and all components support dependency injection
+   4. Customize block validation logic, transaction validation logic, and rules for packaging transactions from the transaction pool  
+   5. Insert custom operations at various stages of the block generation cycle, including controlling when to execute transactions in blocks. Can be used to implement sharding and DAG.  
+   
+  The original intention of developing this project was to address the fact that existing frameworks either have high learning curves or low freedom for customized development. I wanted to create a blockchain framework that is easy to get started with and highly customizable.  
+ In the future, it will support multi-language development. This framework references Tendermint, Muta, Substrate, and XuperChain.   
+ Demo: https://lawliet-chan.github.io/yu.github.io/zh/5.5%E5%BB%BA%E7%AB%8B%E5%8C%BA%E5%9D%97%E9%93%BE%E7%BD%91%E7%BB%9C.html   
 
-## 🛠️ Tech Stack
+- draft RIP: https://ethereum-magicians.org/t/rip-8031-mevless-protocol-the-way-to-anti-mev/25615
 
-1. Rust & Golang
-2. Familiar with the core principles of mainstream public and consortium blockchains (see my universal blockchain framework projects), including consensus mechanisms, state machines, transaction pools, network architecture, and chain structure.
-3. Experienced with distributed systems (including distributed message queues, file systems, databases) and storage engines (boltdb, badger).
 
----
+## Code Contributions to Open Source Projects
+- zkevm-circuit
+  https://github.com/privacy-ethereum/zkevm-circuits  
+  Early contributor to the Ethereum Foundation's zkEVM project
+- Tendermint  
+   https://github.com/tendermint/tendermint/pull/3604  
+   https://github.com/tendermint/tendermint/pull/3610  
+   I provided boltdb to extend Tendermint's underlying storage so it can achieve higher performance than leveldb in random read scenarios.
+- Substrate  
+  https://github.com/paritytech/substrate/commit/b7627c4cf8e109dfc80095c5c58f4cf082b56e4d  
+  Optimized 'spawn_worker' in offchain-worker using thread pools. 
+---  
 
-## 🚀 Open Source Projects
+## Work Experience  
 
-### Personal Projects
+#### reddio (2023.12 ~ Present)
+L2 Parallel EVM Chain Tech Lead
+- starknet sequencer  
+  Built web3 development team, December ~ June, used Yu to complete POC + full sequencer functionality development. Later, due to Starkware's delay in providing zk prover support, the project was forced to halt and pivot to L2 parallel EVM public chain.
+- Reddio Chain  
+  June ~ end of November, used Yu to lead the team to complete L2 EVM development and launch testnet. December ~ May 2025 launched mainnet. On high-performance machines, extreme TPS can reach 13,000.  
+#### scroll (2021.8 ~ 2023.11)
+Blockchain Development & Backend Development
+Participated in developing scroll's coordinator-prover system, and participated in early-stage L2 geth secondary development.
+#### A Foundation in Singapore (Full year 2020)  
+- IPSE   
+https://github.com/Lawliet-Chan/ipse-core  (The main repository has been moved to their GitLab, this is my backup)  
+https://github.com/Lawliet-Chan/ipse-miner    
+This is a blockchain storage project developed using Substrate. Miners (the algorithm is copied from BHD's proof of capacity) calculate hashes based on device storage capacity and submit them to the chain. The chain needs to verify these hashes to validate the miner's approximate storage capacity. Clients publish storage orders to the chain and select miners based on on-chain data. The subsequent proof of whether miners actually stored user data was implemented by the foundation's own R&D team.   
+- IBO  
+ https://github.com/Lawliet-Chan/ibo-chain (The main repository has been moved to their GitLab, this is my backup)  
+ This is a decentralized exchange backend service (very similar to DAO) developed using Substrate. The exchange itself remains centralized. However, users can stake tokens as voting rights to democratically propose, review, vote, and execute actions such as listing coins, delisting coins, switching sections, etc. This entire process takes place on-chain. A proposal must pass congressional review before entering democratic voting. Congress members are also democratically elected. The voting weight each citizen can exercise is determined by the amount and duration of staked tokens. When democratic voting produces results, they are uniformly pushed to the centralized exchange. This ensures transparency and democratization of actions such as listing and delisting digital currencies on cryptocurrency exchanges.    
 
-- **Yu (Universal Blockchain Framework)**
-  - [yu-org/yu](https://github.com/yu-org/yu)
-  - **Production usage:** Adopted by Reddio and AW-Research, and received grants from Starkware and Nervos.
-  - A universal blockchain framework implemented purely in Golang. Started development in December 2020 and is still actively maintained and iterated. With this framework, you can:
-    1. Customize consensus algorithms (including but not limited to pow/pos/poa/pbft). Currently includes simple pow and hotstuff (hotstuff is still being improved).
-    2. Customize on-chain transaction and query logic.
-    3. Customize block and transaction validation logic; set rules for packaging transactions from the pool.
-    4. Insert custom operations at each phase of block production, including controlling when transactions within blocks are executed. Enables features like sharding and DAG.
-  - Motivation: Existing frameworks either have high barriers to entry or offer limited flexibility for custom development, so I aimed to develop a simple yet highly customizable blockchain framework.
-  - Multilingual support is planned. Framework references: tendermint, muta, substrate, xuperchain.
-  - [Demo](https://lawliet-chan.github.io/yu.github.io/zh/5.5%E5%BB%BA%E7%AB%8B%E5%8C%BA%E5%9D%97%E9%93%BE%E7%BD%91%E7%BB%9C.html)
-  - Draft RIP: [MEVless Protocol](https://ethereum-magicians.org/t/rip-8031-mevless-protocol-the-way-to-anti-mev/25615)
+#### PingCAP (2019.2 ~ 2019.4)
+Company website: https://pingcap.com/  
+Developed TiDB automated performance testing tools, including automatic deployment, data import, database preheating, and multi-cluster testing.  
+Reason for leaving: Preparing to work in the blockchain industry.
 
-### Contributions to Other Open Source Projects
+#### futurelab (2018.4 ~ 2018.11)   
+Company website: https://www.futurelab.tv/#/ (The company has been acquired)   
+- Refactoring Infrastructure  
+Refactored code for some basic components, classified logs by level and stored them in Elasticsearch with indexing to distinguish between human operations and bugs, preserving a clean online environment for debugging. Removed HTTP proxies for the backend distributed file system and search system, and developed a client library for the distributed file system so that all operations on the distributed file system and search system are uniformly sent from the backend business system, rather than directly accessing infrastructure via HTTP from external sources. This refactoring layer shields frontend and mobile clients from backend business details, reduces the complexity of the backend system structure, and improves security to some extent, preventing some paid static resources from being browsed arbitrarily.
+- Developing Paid Courses  
+Developed a paid course project based on the newly refactored infrastructure.
 
-- **Tendermint**
-  - [PR #3604](https://github.com/tendermint/tendermint/pull/3604)
-  - [PR #3610](https://github.com/tendermint/tendermint/pull/3610)
-  - Provided boltdb integration to extend Tendermint’s underlying storage, improving random read performance over leveldb.
-- **Substrate**
-  - [Commit](https://github.com/paritytech/substrate/commit/b7627c4cf8e109dfc80095c5c58f4cf082b56e4d)
-  - Optimized the `spawn_worker` in offchain-worker using a thread pool.
+Reason for leaving: Development tasks were basically completed, and the company entered a stable operation phase. The R&D team no longer had challenging tasks.
 
----
+#### Talkingdata (2017.3 ~ 2017.12)  
+Company website: http://www.talkingdata.com/ 
+- Big Data Collection Platform  
+Participated in developing the big data collection platform. All external data that needs to be integrated into the company must go through this platform, which serves as the entry point connecting all business departments. The platform needs to compress external data, persist it, distribute data to various business department product lines by topic combination, and ensure data traceability within one week.
+The platform's daily data collection volume is 30-40TB, and at peak times the team needed to maintain over 80 hybrid cloud nodes.
+- Gray System   
+A gray system developed based on the big data collection platform, which splits or replicates online data flows to gray environments or test environments for use. Business departments can configure their own online data for splitting or replication according to their needs. The rules for splitting and replicating data are pushed to the data collection platform cluster to take effect.
 
-## 💼 Work Experience
-
-**reddio (Dec 2023 – Present)**  
-Tech Lead, L2 Parallel EVM Chain
-- **Starknet Sequencer:** Built web3 development team, Dec–Jun, used Yu to complete POC and full sequencer functionality. Project halted due to lack of zk prover support from Starkware, then pivoted to L2 parallel EVM public chain.
-- **Reddio Chain:** Jun–Nov, led team to develop and launch L2 EVM testnet using Yu; mainnet launched Dec 2023–May 2025. Achieved extreme TPS of up to 13,000 on high-performance machines.
-
-**scroll (Aug 2021 – Nov 2023)**  
-Blockchain & Backend Developer  
-- Developed scroll’s coordinator-prover system and contributed to early-stage L2 geth development.
-
-**Singapore Foundation (Full year 2020)**  
-- **IPSE:**  
-  [IPSE Core](https://github.com/Lawliet-Chan/ipse-core) | [IPSE Miner](https://github.com/Lawliet-Chan/ipse-miner)  
-  Blockchain storage project using substrate; miners calculate hash submissions based on device storage capacity (similar to BHD’s proof of capacity) for the chain to verify approximate storage capability. Clients publish storage orders to chain and select miners based on on-chain data. Subsequent proof of actual storage was implemented by the foundation’s own R&D team.
-- **IBO:**  
-  [IBO Chain](https://github.com/Lawliet-Chan/ibo-chain)  
-  Decentralized exchange backend service using substrate (akin to DAO). The exchange itself remains centralized, but users can stake tokens for voting rights to propose, audit, and vote on listing/delisting coins, section changes, etc. All steps are governed and executed on-chain. Proposals must pass parliamentary review before entering the democratic vote; parliamentary members are themselves democratically elected. Voting weight is determined by staked token amount and duration. After a vote, results are pushed to the centralized exchange, ensuring transparency and democracy for exchange operations.
-
-**PingCAP (Feb 2019 – Apr 2019)**  
-- [Company Website](https://pingcap.com/)  
-- Developed TiDB automated performance testing tools (deployment, data import, DB warming, multi-cluster testing).
-- Left to pursue a blockchain career.
-
-**Futurelab (Apr 2018 – Nov 2018)**  
-- [Company Website](https://www.futurelab.tv/#/) (acquired)
-- Refactored core infrastructure components, implemented graded and categorized logging in Elasticsearch for clear debugging, replaced distributed FS/search HTTP proxies with client libraries for unified backend requests. This masked backend details from frontend/mobile, reduced backend complexity, and improved security.
-- Developed a paid course project based on the new infrastructure.
-- Left as development tasks completed and company entered stable operation phase; R&D team faced no more technical challenges.
-
-**TalkingData (Mar 2017 – Dec 2017)**  
-- [Company Website](http://www.talkingdata.com/)
-- Developed a big data collection platform (30–40TB/day) for all business units; maintained over 80 hybrid cloud nodes.
-- Built a “grey system” for data segmentation/copying into test/staging environments, with rule-based configs effective cluster-wide.
-- Left after system stabilized, team was disbanded and merged into BU ops due to departmental restructuring.
-
----
-
-*Feel free to connect!*
+Reason for leaving: The system was running stably with no iteration needs. The department's organizational structure was adjusted, and my team was disbanded and merged into various BU operations. The work no longer had challenges.
