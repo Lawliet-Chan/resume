@@ -29,6 +29,7 @@
  In the future, it will support multi-language development. This framework references Tendermint, Muta, Substrate, and XuperChain.   
  Demo: https://lawliet-chan.github.io/yu.github.io/zh/5.5%E5%BB%BA%E7%AB%8B%E5%8C%BA%E5%9D%97%E9%93%BE%E7%BD%91%E7%BB%9C.html   
 
+- draft EIP: https://github.com/ethereum/EIPs/pull/10855
 - draft RIP: https://ethereum-magicians.org/t/rip-8031-mevless-protocol-the-way-to-anti-mev/25615
 
 
