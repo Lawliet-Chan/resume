@@ -53,11 +53,17 @@
 L2 Parallel EVM Chain Tech Lead
 - starknet sequencer  
   Built web3 development team, December ~ June, used Yu to complete POC + full sequencer functionality development. Later, due to Starkware's delay in providing zk prover support, the project was forced to halt and pivot to L2 parallel EVM public chain.
+  https://github.com/reddio-com/itachi   
 - Reddio Chain  
-  June ~ end of November, used Yu to lead the team to complete L2 EVM development and launch testnet. December ~ May 2025 launched mainnet. On high-performance machines, extreme TPS can reach 13,000.  
+  June ~ end of November, used Yu to lead the team to complete L2 EVM development and launch testnet. December ~ May 2025 launched mainnet. On high-performance machines, extreme TPS can reach 13,000.   
+  https://github.com/reddio-com/reddio
 #### scroll (2021.8 ~ 2023.11)
 Blockchain Development & Backend Development
-Participated in developing scroll's coordinator-prover system, and participated in early-stage L2 geth secondary development.
+Participated in developing scroll's coordinator-prover system, and participated in early-stage L2 geth secondary development.    
+https://github.com/scroll-tech/scroll   
+https://github.com/scroll-tech/scroll-prover   
+https://github.com/privacy-ethereum/zkevm-circuits   
+
 #### A Foundation in Singapore (Full year 2020)  
 - IPSE   
 https://github.com/Lawliet-Chan/ipse-core  (The main repository has been moved to their GitLab, this is my backup)  
