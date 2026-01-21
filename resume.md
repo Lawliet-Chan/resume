@@ -30,9 +30,8 @@
  Demo: https://lawliet-chan.github.io/yu.github.io/zh/5.5%E5%BB%BA%E7%AB%8B%E5%8C%BA%E5%9D%97%E9%93%BE%E7%BD%91%E7%BB%9C.html   
 
 ### Ethereum ecosystem contributions
-- draft EIP: https://github.com/ethereum/EIPs/pull/10855
-- draft RIP: https://ethereum-magicians.org/t/rip-8031-mevless-protocol-the-way-to-anti-mev/25615
-
+- EIP-8099:
+https://github.com/ethereum/EIPs/blob/master/EIPS/eip-8099.md
 
 ## Code Contributions to Open Source Projects
 - zkevm-circuit
