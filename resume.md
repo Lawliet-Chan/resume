@@ -43,14 +43,14 @@ https://github.com/privacy-ethereum/zkevm-circuits
 
 - **IPSE** — Storage Public Chain
 
-  https://github.com/Lawliet-Chan/ipse-core (backup; main repo moved to their GitLab)
+  https://github.com/Lawliet-Chan/ipse-core
   https://github.com/Lawliet-Chan/ipse-miner
 
   A Substrate-based storage public chain. Miners submit hashes based on storage capacity (BHD proof-of-capacity algorithm) for on-chain verification. Clients publish storage orders and select miners via on-chain data.
 
 - **IBO**
 
-  https://github.com/Lawliet-Chan/ibo-chain (backup; main repo moved to their GitLab)
+  https://github.com/Lawliet-Chan/ibo-chain
 
   A Substrate-based decentralized exchange governance backend (DAO-like). On-chain democratic mechanisms (staking-based voting, congressional review, public referendum) govern coin listing/delisting decisions.
 
@@ -62,7 +62,7 @@ Developed TiDB automated performance testing tools: automatic deployment, data i
 
 #### futurelab (2018.4 ~ 2018.11)
 
-https://www.futurelab.tv/#/ (acquired)
+https://www.futurelab.tv/#/
 
 - **Infrastructure Refactoring**: Classified logs into Elasticsearch, replaced HTTP proxies with a distributed file system client library, reducing backend complexity and improving security.
 
